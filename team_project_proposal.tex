@@ -12,7 +12,7 @@ CSCI 6840 Final Project Part 2 Proposal
 This project will use data mining methods to predict future temperature from historical weather measurements. The problem is a supervised regression task for time-series forecasting: given previous readings, predict temperature 1 hour, 6 hours, and 24 hours ahead. We will compare temperature-only forecasting with multivariate forecasting to test whether pressure, humidity, wind, dew point, and related variables improve accuracy.
 
 \medskip
-\noindent\textbf{1. Team Members.}\\
+\noindent\textbf{1. Washington-Scott Team Members.}\\
 Kareem Washington, washingtonk21@students.ecu.edu\\
 John Aramis Scott, scottjo24@students.ecu.edu
 
@@ -22,7 +22,7 @@ We will use the public Jena Climate dataset, which contains about 420,000 readin
 
 \medskip
 \noindent\textbf{3. Objectives.}
-Our objective is to predict temperature at 1-hour, 6-hour, and 24-hour horizons. We will compare a persistence baseline, a temperature-only model, and multivariate models. Success will be measured with MAE and RMSE, with optional $R^2$. A successful result means the learned models reduce MAE/RMSE compared with the persistence baseline and show whether extra weather variables add useful information beyond past temperature.
+Our objective is to predict temperature at 1-hour, 6-hour, and 24-hour horizons. We will compare a persistence baseline, a temperature-only model, and multivariate models. Success will be measured with MAE and RMSE, with $R^2$. A successful result means the learned models reduce MAE/RMSE compared with the persistence baseline and show whether extra weather variables add useful information beyond past temperature.
 
 \medskip
 \noindent\textbf{4. Motivation (Why It Matters).}
@@ -30,6 +30,6 @@ Short-term weather prediction supports agriculture, transportation, energy plann
 
 \medskip
 \noindent\textbf{5. Approach (Initial Plan).}
-We will follow the course KDD process: data cleaning, data selection, data transformation, data mining, evaluation, presentation, and applying knowledge. First, we will inspect missing or bad readings, verify time order, and decide whether to resample the 10-minute data to hourly data. Next, we will create lag/window features and explore correlations, seasonal patterns, histograms, and scatter plots. For modeling, we will start with a persistence forecast, then train linear regression and random forest regression models using Python, pandas, NumPy, scikit-learn, and Matplotlib. We will use chronological training, validation, and test splits to avoid data leakage. If time allows, we may add anomaly detection for unusual weather patterns or a neural-network model for multi-step forecasting.
+We will follow the course KDD process: data cleaning, data selection, data transformation, data mining, evaluation, presentation, and applying knowledge. First, we will inspect missing or bad readings, verify time order, and resample the 10-minute data to hourly data. Next, we will create lag/window features and explore correlations, seasonal patterns, histograms, and scatter plots. For modeling, we will start with a persistence forecast, then train linear regression and random forest regression models using Python, pandas, NumPy, scikit-learn, and Matplotlib. We will use chronological training, validation, and test splits to avoid data leakage. If time allows, we may add anomaly detection for unusual weather patterns or a neural-network model for multi-step forecasting.
 
 \end{document}

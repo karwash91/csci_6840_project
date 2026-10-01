@@ -1,10 +1,11 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
 
 \begin{document}
 
 \begin{center}
-{\large Short-Term Temperature Forecasting with Jena Climate Data}\\
+{\large Short-Term Temperature Forecasting Using the Jena Climate Dataset}\\
 CSCI 6840 Final Project Part 2 Proposal
 \end{center}
 
@@ -19,11 +20,11 @@ John Aramis Scott, scottjo24@students.ecu.edu
 
 \medskip
 \noindent\textbf{2. Data Source.}
-We will use the public Jena Climate dataset, which contains about 420,000 readings from 2009-2016. The data are recorded every 10 minutes and include 14 weather variables such as temperature, pressure, humidity, wind speed, wind direction, and dew point. This fits the course topic of time-series data because observations are indexed in time order and nearby readings are related.
+We will use the public \href{https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip}{Jena Climate dataset hosted by TensorFlow}, which contains about 420,000 readings from 2009-2016. The data are recorded every 10 minutes and include 14 weather variables such as temperature, pressure, humidity, wind speed, wind direction, and dew point. This fits the course topic of time-series data because observations are indexed in time order and nearby readings are related.
 
 \medskip
 \noindent\textbf{3. Objectives.}
-Our objective is to predict temperature at 1-hour, 6-hour, and 24-hour horizons. We will compare a persistence baseline, a temperature-only model, and multivariate models. Success will be measured with MAE and RMSE, with $R^2$. A successful result means the learned models reduce MAE/RMSE compared with the persistence baseline and show whether extra weather variables add useful information beyond past temperature.
+Our objective is to predict temperature at 1-hour, 6-hour, and 24-hour horizons. We will compare a persistence baseline, a temperature-only model, and multivariate models. Success will be measured primarily with MAE and RMSE, with $R^2$ reported as an additional measure. A successful result means the learned models reduce MAE/RMSE compared with the persistence baseline and show whether extra weather variables add useful information beyond past temperature.
 
 \medskip
 \noindent\textbf{4. Motivation (Why It Matters).}
